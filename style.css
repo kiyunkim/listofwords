@@ -1,0 +1,34 @@
+.title_tag {
+  display: inline-block;
+  position: absolute;
+  max-width: 200px;
+  text-align: center;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #000;
+}
+.title_tag p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+.title_tag:before,
+.title_tag:after {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #eee;
+  bottom: -15px;
+  content: '';
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+}
+.title_tag:before {
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid;
+  border-top-color: inherit; /* Can't be included in the shorthand to work */
+  bottom: -18px;
+  margin-left: -18px;
+}
