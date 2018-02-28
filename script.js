@@ -67,3 +67,66 @@ $(document).ready(function() {
   });
   holiday_tooltip2017.setup();
 });
+
+
+/**
+ * ScrollTo js, copy + pasted
+ * TODO: Combine with tooltip js
+ */
+
+/*
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+		$('#top').fadeIn();
+		} else {
+			$('#top').fadeOut();
+		}
+	});
+	$('#top').click(function () {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 600);
+		return false;
+	});
+  */
+	
+ var backToTop = {
+  setup: function () {
+    // values can be set in Chameleon, but we don't trust Chameleon...
+    var fadeSpeed = (typeof backToTopFadeSpeed == 'undefined') ? 'slow' : backToTopFadeSpeed;
+    var scrollSpeed = (typeof backToTopScrollSpeed == 'undefined') ? 'slow' : backToTopScrollSpeed;
+    var trigger = (typeof backToTopTrigger == 'undefined') ? 400 : backToTopTrigger;
+
+
+    $(window).on('scroll.isScroll', function () {
+      if ($(this).scrollTop() >= trigger) {
+          $('#back-to-top').fadeIn(fadeSpeed);
+      }
+      else {
+          $('#back-to-top').fadeOut(fadeSpeed);
+      }
+    });
+
+    $('#back-to-top').on('click', function () {
+        $('body, html').animate({ scrollTop: 0 }, scrollSpeed);
+    });
+  }
+}
+var scrollMenu = {
+  setup: function (menu, scrollSpeed) {
+      scrollSpeed = scrollSpeed || 'slow';
+      $(menu).on('click', function (e) {
+        var scrollElement = $($(this).attr('data-href')).offset().top;
+        // console.log(scrollElement)
+        scrollMenu.scroll(scrollElement, scrollSpeed);
+      });
+  },
+  scroll: function (scroll, scrollSpeed) {
+      $('body, html').animate({ scrollTop: scroll }, scrollSpeed);
+  }
+}
+
+$(document).ready(function(e) {
+  scrollMenu.setup('.alphabetlist span');
+  backToTop.setup();
+});
