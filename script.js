@@ -69,10 +69,18 @@ $(document).ready(function() {
 });
 
 
+
+
+
+
+
 /**
  * ScrollTo js, copy + pasted
  * TODO: Combine with tooltip js
  */
+
+
+
 
 /*
 	$(window).scroll(function () {
