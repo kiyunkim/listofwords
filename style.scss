@@ -1,152 +1,140 @@
 /* ------------------------------------
-  Variables
-  ------------------------------------ */
+  Variables & Mixins
+--------------------------------------- */
 $fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$fontSize: 16px;
 
-/* ------------------------------------
-  Mixins
-  ------------------------------------ */
-@mixin box-shadow($var) {
-  -webkit-box-shadow: $var;
-  -moz-box-shadow: $var;
-  box-shadow: $var;
-}
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
 @mixin box-sizing($var) {
   -webkit-box-sizing: $var;
   -moz-box-sizing: $var;
   box-sizing: $var;
 }
 
-// font: italic bold 12px/1.5 Georgia, serif;
 /* ------------------------------------
   ScrollTo list
-  ------------------------------------ */
-  .container {
-    width: 100%;
-    max-width: 779px;
-    margin: 10px auto;
-    font: normal 14px/1.3 $fontFamily;
+--------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 779px;
+  margin: 10px auto;
+  line-height: 1.5;
+  font: normal $fontSize $fontFamily;
+  @include box-sizing(border-box);
+  * {
+    list-style: none;
     @include box-sizing(border-box);
-    * {
-      list-style: none;
-      @include box-sizing(border-box);
-    }
-    h1 {
-      line-height: 1;
-      text-align: center;
-    }
-    h1 .title {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    
-    /* top nav */
-    .alphabetlist {
-      margin: 1em;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      text-align: center;
-      padding: 5px 0;
-    }
-    .alphabetlist span {
-      display: inline-block;
-      font-size: 1.2em;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 5px;
-    }
-    .alphabetlist span.nope {
-      color: #ddd; 
-      cursor: default;
-    }
+  }
+  h1 {
+    line-height: 1;
+    text-align: center;
+  }
+  h1 .title {
+    font-size: 1.5em;
+    font-weight: bold;
   }
   
-  /* section */
-  .brand-section {
-    padding: 1em;
-    margin: 1em 0;
-  }
-  .brand-section p {
-    font-weight: bold;
-    font-size: 1.3em;
-    margin-bottom: .5em;
-    border-bottom: 1px solid #ddd;
-  }
-  .brand-section a {
-    text-decoration: none; 
+  /* top nav */
+  .alphabetlist {
+    margin: 1em;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
     padding: 5px 0;
+  }
+  .alphabetlist span {
     display: inline-block;
-  }
-  .brand-section a:hover {
-    color: #999;
-  }
-  .backtotop {
-    cursor: pointer;
-    text-transform: uppercase;
-    float: right;
-    font-size: 12px;
+    font-size: 1.2em;
     font-weight: bold;
+    cursor: pointer;
     padding: 5px;
   }
-  .backtotop::after {
-    clear: both;
-    content: '';
-    display: table;
+  .alphabetlist span.nope {
+    color: #ddd; 
+    cursor: default;
   }
-  @media screen and (max-device-width: 46em) {
-    .container { 
-      margin: 0;
-      padding: 0 5px;
-    }
-    .alphabetlist {
-      border: none;
-      padding: 0;
-      margin: 10px 0;
-    }
-    .alphabetlist span {
-      font-size: 1.5em;
-      padding: 4px 0;
-      margin: 4px 2px;
-      background-color: #f2f2f2;
-      width: 1.5em;
-      display: inline-block;
-    }
-    .alphabetlist span:not(.nope):active {
-      background-color: #aaa;
-    }
-    .brand-section,
-    .brand-section ul { margin: 0; }
-    .back-to-top {
-      z-index: 5;
-      position: fixed;
-      bottom: 35px;
-      right: 0;
-      width: 70px;
-      height: 50px;
-      line-height: 50px;
-      background-color: rgba(48,46,48,.9);
-    }
-    .back-to-top a {
-      display: inline-block;
-      padding: .625rem;
-      font-size: .75rem;
-      vertical-align: middle;
-      line-height: normal;
-      text-align: center;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #fff;
-    }
+}
+
+/* section */
+.brand-section {
+  padding: 1em;
+  margin: 1em 0;
+}
+.brand-section p {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: .5em;
+  border-bottom: 1px solid #ddd;
+}
+.brand-section a {
+  text-decoration: none; 
+  padding: 5px 0;
+  display: inline-block;
+}
+.brand-section a:hover {
+  color: #999;
+}
+.backtotop {
+  cursor: pointer;
+  text-transform: uppercase;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+}
+.backtotop::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+@media screen and (max-device-width: 46em) {
+  .container { 
+    margin: 0;
+    padding: 0 5px;
   }
+  .alphabetlist {
+    border: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .alphabetlist span {
+    font-size: 1.5em;
+    padding: 4px 0;
+    margin: 4px 2px;
+    background-color: #f2f2f2;
+    width: 1.5em;
+    display: inline-block;
+  }
+  .alphabetlist span:not(.nope):active {
+    background-color: #aaa;
+  }
+  .brand-section,
+  .brand-section ul { margin: 0; }
+  .back-to-top {
+    z-index: 5;
+    position: fixed;
+    bottom: 35px;
+    right: 0;
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(48,46,48,.9);
+  }
+  .back-to-top a {
+    display: inline-block;
+    padding: .625rem;
+    font-size: .75rem;
+    vertical-align: middle;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
 /* ------------------------------------
   Tooltips
-  ------------------------------------ */
-
+--------------------------------------- */
 .title_tag {
   display: inline-block;
   position: absolute;
