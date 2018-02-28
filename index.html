@@ -1,348 +1,194 @@
-<style>
-.brandslp {
-  width: 100%;
-  max-width: 779px;
-  background: #fff;
-  margin: 10px;
-  margin-right: 0;
-  font-size: 14px;
-  line-height: 1.3;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.brandslp * {
-  list-style: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.brandslp h1 {
-  line-height: 1;
-  text-align: center;
-}
-.brandslp h1 .title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Tooltips</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <meta name="keywords" content="tooltip,tooltips,hover">
+  <meta name="description" content="Demo of a simple tooltip function">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="../css/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* top nav */
-.brandslp .alphabetlist {
-  margin: 1em;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  padding: 5px 0;
-}
-.brandslp .alphabetlist span {
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 5px;
-}
-.brandslp .alphabetlist span.nope {
-  color: #ddd; 
-  cursor: default;
-}
-
-/* section */
-.brand-section {
-  padding: 1em;
-  margin: 1em 0;
-}
-.brand-section p {
-  font-weight: bold;
-  font-size: 1.3em;
-  margin-bottom: .5em;
-  border-bottom: 1px solid #ddd;
-}
-.brand-section a {
-  text-decoration: none; 
-  padding: 5px 0;
-  display: inline-block;
-}
-.brand-section a:hover {
-  color: #999;
-}
-.backtotop {
-  cursor: pointer;
-  text-transform: uppercase;
-  float: right;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px;
-}
-.backtotop::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-@media screen and (max-device-width: 46em) {
-  .brandslp { 
-    margin: 0;
-    padding: 0 5px;
-  }
-  .brandslp .alphabetlist {
-    border: none;
-    padding: 0;
-    margin: 10px 0;
-  }
-  .brandslp .alphabetlist span {
-    font-size: 1.5em;
-    padding: 4px 0;
-    margin: 4px 2px;
-    background-color: #f2f2f2;
-    width: 1.5em;
-    display: inline-block;
-  }
-  .brandslp .alphabetlist span:not(.nope):active {
-    background-color: #aaa;
-  }
-  .brand-section,
-  .brand-section ul { margin: 0; }
-  .back-to-top {
-    z-index: 5;
-    position: fixed;
-    bottom: 35px;
-    right: 0;
-    width: 70px;
-    height: 50px;
-    line-height: 50px;
-    background-color: rgba(48,46,48,.9);
-  }
-  .back-to-top a {
-    display: inline-block;
-    padding: .625rem;
-    font-size: .75rem;
-    vertical-align: middle;
-    line-height: normal;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-  }
-}
-</style>
-
-<div class="brandslp mobileHero">
-  <h1>Big and Tall <br>
-    <span class="title">All Brands</span></h1>
-  <div class="alphabetlist">
-    <p>
-      <span data-href="#A">A</span>
-      <span data-href="#B">B</span>
-      <span data-href="#C">C</span>
-      <span data-href="#D">D</span>
-      <span data-href="#E" class="nope">E</span>
-      <span data-href="#F" class="nope">F</span>
-      <span data-href="#G" class="nope">G</span>
-      <span data-href="#H">H</span>
-      <span data-href="#I" class="nope">I</span>
-      <span data-href="#J">J</span>
-      <span data-href="#K">K</span>
-      <span data-href="#L">L</span>
-      <span data-href="#M">M</span>
-      <span data-href="#N">N</span>
-      <span data-href="#O" class="nope">O</span>
-      <span data-href="#P">P</span>
-      <span data-href="#Q" class="nope">Q</span>
-      <span data-href="#R">R</span>
-      <span data-href="#S">S</span>
-      <span data-href="#T">T</span>
-      <span data-href="#U" class="nope">U</span>
-      <span data-href="#V" class="nope">V</span>
-      <span data-href="#W">W</span>
-      <span data-href="#X" class="nope">X</span>
-      <span data-href="#Y" class="nope">Y</span>
-      <span data-href="#Z" class="nope">Z</span>
-    </p>
+<body ontouchstart="">
+  <img src="http://www.ieatgreen.com/wp-content/uploads/2017/02/supermarket-shelf-1094824_1280.png" alt="supermarket shelf" usemap="#hp_hero" />
+  <map name="hp_hero">
+    <area title="Short Product Name" shape="rect" coords="6,221,308,553" href="#" class="tooltip_map_area">
+    <area title="Short Product 2" shape="rect" coords="409,222,711,554" href="#" class="tooltip_map_area">
+    <area title="A Product With a Really Long Name With Brand Name" shape="rect" coords="586,566,979,978" href="#" class="tooltip_map_area">
+    <area alt="Shop now" shape="rect" coords="200,564,566,977" href="#">
+  </map>
+  
+  <div class="title_tag" style="display: none;">
+    <p></p>
   </div>
 
-  <div id="A" class="brand-section">
-    <p>A</p>
-    <ul class="brand-list">
-      <li><a href="/Big-and-Tall-ASICS.aspx?DeptId=25148">ASCIS</a></li>
-    </ul>
+  <div class="brandslp mobileHero">
+    <h1>All Brands</h1>
+    <div class="alphabetlist">
+      <p>
+        <span data-href="#A">A</span>
+        <span data-href="#B">B</span>
+        <span data-href="#C">C</span>
+        <span data-href="#D">D</span>
+        <span data-href="#E" class="nope">E</span>
+        <span data-href="#F" class="nope">F</span>
+        <span data-href="#G" class="nope">G</span>
+        <span data-href="#H">H</span>
+        <span data-href="#I" class="nope">I</span>
+        <span data-href="#J">J</span>
+        <span data-href="#K">K</span>
+        <span data-href="#L">L</span>
+        <span data-href="#M">M</span>
+        <span data-href="#N">N</span>
+        <span data-href="#O" class="nope">O</span>
+        <span data-href="#P">P</span>
+        <span data-href="#Q" class="nope">Q</span>
+        <span data-href="#R">R</span>
+        <span data-href="#S">S</span>
+        <span data-href="#T">T</span>
+        <span data-href="#U" class="nope">U</span>
+        <span data-href="#V" class="nope">V</span>
+        <span data-href="#W">W</span>
+        <span data-href="#X" class="nope">X</span>
+        <span data-href="#Y" class="nope">Y</span>
+        <span data-href="#Z" class="nope">Z</span>
+      </p>
+    </div>
+  
+    <div id="A" class="brand-section">
+      <p>A</p>
+      <ul class="brand-list">
+        <li><a href="/Big-and-Tall-ASICS.aspx?DeptId=25148">ASCIS</a></li>
+      </ul>
+    </div>
+  
+    <div id="B" class="brand-section">
+      <p>B</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Boulder-Creek.aspx?DeptId=24054">Boulder Creek</a></li>
+      </ul>
+    </div>
+  
+    <div id="C" class="brand-section">
+      <p>C</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Champion.aspx?DeptId=24667">Champion</a></li>
+        <li><a href="/Big-and-Tall-Copper-Fit.aspx?DeptId=24060">Copper Fit</a></li>
+      </ul>
+    </div>
+  
+    <div id="D" class="brand-section">
+      <p>D</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Dan-Post.aspx?DeptId=24061">Dan Post</a></li>
+        <li><a href="/Big-and-Tall-Deer-Stags.aspx?DeptId=32020">Deer Stag</a></li>
+        <li><a href="/Big-and-Tall-Dickies.aspx?DeptId=24430">Dickies</a></li>
+        <li><a href="/Big-and-Tall-Dingo.aspx?DeptId=24062">Dingo</a></li>
+        <li><a href="/Big-and-Tall-Dockers.aspx?DeptId=24063">Dockers</a></li>
+      </ul>
+    </div>
+  
+    <div id="H" class="brand-section">
+      <p>H</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Hanes.aspx?DeptId=24666">Hanes</a></li>
+        <li><a href="/Big-and-Tall-Hush-Puppies.aspx?DeptId=24068">Hush Puppies</a></li>
+      </ul>
+    </div>
+  
+    <div id="J" class="brand-section">
+      <p>J</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Jockey.aspx?DeptId=24069">Jockey</a></li>
+        <li><a href="/Big-and-Tall-John-Deere.aspx?DeptId=26740">John Deere</a></li>
+      </ul>
+    </div>
+  
+    <div id="K" class="brand-section">
+      <p>K</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Kings-Court.aspx?DeptId=24071">Kings' Court</a></li>
+        <li><a href="/Big-and-Tall-KingSize.aspx?DeptId=24070">KingSize</a></li>
+        <li><a href="/Big-and-Tall-KS-Island.aspx?DeptId=25149">KS Island</a></li>
+        <li><a href="/Big-and-Tall-KS-Sport.aspx?DeptId=25057">KS Sport</a></li>
+      </ul>
+    </div>
+  
+    <div id="L" class="brand-section">
+      <p>L</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Laredo.aspx?DeptId=24458">Laredo</a></li>
+        <li><a href="/Big-and-Tall-LB-Evans.aspx?DeptId=26460">L.B. Evans</a></li>
+        <li><a href="/Big-and-Tall-Lee.aspx?DeptId=24835">Lee</a></li>
+        <li><a href="/Big-and-Tall-Levis.aspx?DeptId=24074">Levi's</a></li>
+        <li><a href="/Big-and-Tall-Liberty-Blues.aspx?DeptId=24075">Liberty Blues</a></li>
+      </ul>
+    </div>
+  
+    <div id="M" class="brand-section">
+      <p>M</p>
+      <ul>
+        <li><a href="/Big-and-Tall-McRae.aspx?DeptId=24076">McRae</a></li>
+      </ul>
+    </div>
+  
+    <div id="N" class="brand-section">
+      <p>N</p>
+      <ul>
+        <li><a href="/Big-and-Tall-New-Balance.aspx?DeptId=24077">New Balance</a></li>
+      </ul>
+    </div>
+  
+    <div id="P" class="brand-section">
+      <p>P</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Propet.aspx?DeptId=24079">Propet</a></li>
+      </ul>
+    </div>
+  
+    <div id="R" class="brand-section">
+      <p>R</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Rockport.aspx?DeptId=24091">Rockport</a></li>
+        <li><a href="Big-and-Tall-Russell-Athletic.aspx?DeptId=24083">Russel Athletic</a></li>
+      </ul>
+    </div>
+  
+    <div id="S" class="brand-section">
+      <p>S</p>
+      <ul>
+        <li><a href="/Big-and-Tall-SETA.aspx?DeptId=32088">SETA</a></li>
+        <li><a href="/Big-and-Tall-Sports-Fan-Shop.aspx?DeptId=25029">Sports Fan Shop</a></li>
+      </ul>
+    </div>
+  
+    <div id="T" class="brand-section">
+      <p>T</p>
+      <ul>
+        <li><a href="/Big-and-Tall-TallOrder-Socks.aspx?DeptId=24087">TallOrder Socks</a></li>
+        <li><a href="/Big-and-Tall-Timberland.aspx?DeptId=24086">Timberland</a></li>
+      </ul>
+    </div>
+  
+    <div id="W" class="brand-section">
+      <p>W</p>
+      <ul>
+        <li><a href="/Big-and-Tall-Wigwam.aspx?DeptId=24635">Wigwam</a></li>
+        <li><a href="/Big-and-Tall-Wrangler.aspx?DeptId=24090">Wrangler</a></li>
+      </ul>
+    </div>
+    <a id="back-to-top" style="display: none;"></a>
+    <div class="back-to-top" style="display: none;"><a href="#">Back To Top</a></div>
   </div>
 
-  <div id="B" class="brand-section">
-    <p>B</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Boulder-Creek.aspx?DeptId=24054">Boulder Creek</a></li>
-    </ul>
-  </div>
-
-  <div id="C" class="brand-section">
-    <p>C</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Champion.aspx?DeptId=24667">Champion</a></li>
-      <li><a href="/Big-and-Tall-Copper-Fit.aspx?DeptId=24060">Copper Fit</a></li>
-    </ul>
-  </div>
-
-  <div id="D" class="brand-section">
-    <p>D</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Dan-Post.aspx?DeptId=24061">Dan Post</a></li>
-      <li><a href="/Big-and-Tall-Deer-Stags.aspx?DeptId=32020">Deer Stag</a></li>
-      <li><a href="/Big-and-Tall-Dickies.aspx?DeptId=24430">Dickies</a></li>
-      <li><a href="/Big-and-Tall-Dingo.aspx?DeptId=24062">Dingo</a></li>
-      <li><a href="/Big-and-Tall-Dockers.aspx?DeptId=24063">Dockers</a></li>
-    </ul>
-  </div>
-
-  <div id="H" class="brand-section">
-    <p>H</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Hanes.aspx?DeptId=24666">Hanes</a></li>
-      <li><a href="/Big-and-Tall-Hush-Puppies.aspx?DeptId=24068">Hush Puppies</a></li>
-    </ul>
-  </div>
-
-  <div id="J" class="brand-section">
-    <p>J</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Jockey.aspx?DeptId=24069">Jockey</a></li>
-      <li><a href="/Big-and-Tall-John-Deere.aspx?DeptId=26740">John Deere</a></li>
-    </ul>
-  </div>
-
-  <div id="K" class="brand-section">
-    <p>K</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Kings-Court.aspx?DeptId=24071">Kings' Court</a></li>
-      <li><a href="/Big-and-Tall-KingSize.aspx?DeptId=24070">KingSize</a></li>
-      <li><a href="/Big-and-Tall-KS-Island.aspx?DeptId=25149">KS Island</a></li>
-      <li><a href="/Big-and-Tall-KS-Sport.aspx?DeptId=25057">KS Sport</a></li>
-    </ul>
-  </div>
-
-  <div id="L" class="brand-section">
-    <p>L</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Laredo.aspx?DeptId=24458">Laredo</a></li>
-      <li><a href="/Big-and-Tall-LB-Evans.aspx?DeptId=26460">L.B. Evans</a></li>
-      <li><a href="/Big-and-Tall-Lee.aspx?DeptId=24835">Lee</a></li>
-      <li><a href="/Big-and-Tall-Levis.aspx?DeptId=24074">Levi's</a></li>
-      <li><a href="/Big-and-Tall-Liberty-Blues.aspx?DeptId=24075">Liberty Blues</a></li>
-    </ul>
-  </div>
-
-  <div id="M" class="brand-section">
-    <p>M</p>
-    <ul>
-      <li><a href="/Big-and-Tall-McRae.aspx?DeptId=24076">McRae</a></li>
-    </ul>
-  </div>
-
-  <div id="N" class="brand-section">
-    <p>N</p>
-    <ul>
-      <li><a href="/Big-and-Tall-New-Balance.aspx?DeptId=24077">New Balance</a></li>
-    </ul>
-  </div>
-
-  <div id="P" class="brand-section">
-    <p>P</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Propet.aspx?DeptId=24079">Propet</a></li>
-    </ul>
-  </div>
-
-  <div id="R" class="brand-section">
-    <p>R</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Rockport.aspx?DeptId=24091">Rockport</a></li>
-      <li><a href="Big-and-Tall-Russell-Athletic.aspx?DeptId=24083">Russel Athletic</a></li>
-    </ul>
-  </div>
-
-  <div id="S" class="brand-section">
-    <p>S</p>
-    <ul>
-      <li><a href="/Big-and-Tall-SETA.aspx?DeptId=32088">SETA</a></li>
-      <li><a href="/Big-and-Tall-Sports-Fan-Shop.aspx?DeptId=25029">Sports Fan Shop</a></li>
-    </ul>
-  </div>
-
-  <div id="T" class="brand-section">
-    <p>T</p>
-    <ul>
-      <li><a href="/Big-and-Tall-TallOrder-Socks.aspx?DeptId=24087">TallOrder Socks</a></li>
-      <li><a href="/Big-and-Tall-Timberland.aspx?DeptId=24086">Timberland</a></li>
-    </ul>
-  </div>
-
-  <div id="W" class="brand-section">
-    <p>W</p>
-    <ul>
-      <li><a href="/Big-and-Tall-Wigwam.aspx?DeptId=24635">Wigwam</a></li>
-      <li><a href="/Big-and-Tall-Wrangler.aspx?DeptId=24090">Wrangler</a></li>
-    </ul>
-  </div>
-  <a id="back-to-top" style="display: none;"></a>
-  <div class="back-to-top" style="display: none;"><a href="#">Back To Top</a></div>
-</div>
-
-
-<script>
-
-	/*
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-		$('#top').fadeIn();
-		} else {
-			$('#top').fadeOut();
-		}
-	});
-	$('#top').click(function () {
-		$("html, body").animate({
-			scrollTop: 0
-		}, 600);
-		return false;
-	});
-  */
-	
-  var backToTop = {
-    setup: function () {
-      // values can be set in Chameleon, but we don't trust Chameleon...
-      var fadeSpeed = (typeof backToTopFadeSpeed == 'undefined') ? 'slow' : backToTopFadeSpeed;
-      var scrollSpeed = (typeof backToTopScrollSpeed == 'undefined') ? 'slow' : backToTopScrollSpeed;
-      var trigger = (typeof backToTopTrigger == 'undefined') ? 400 : backToTopTrigger;
-
-
-      $(window).on('scroll.isScroll', function () {
-        if ($(this).scrollTop() >= trigger) {
-            $('#back-to-top').fadeIn(fadeSpeed);
-        }
-        else {
-            $('#back-to-top').fadeOut(fadeSpeed);
-        }
-      });
-
-      $('#back-to-top').on('click', function () {
-          $('body, html').animate({ scrollTop: 0 }, scrollSpeed);
-      });
-    }
-  }
-  var scrollMenu = {
-    setup: function (menu, scrollSpeed) {
-        scrollSpeed = scrollSpeed || 'slow';
-        $(menu).on('click', function (e) {
-          var scrollElement = $($(this).attr('data-href')).offset().top;
-          // console.log(scrollElement)
-          scrollMenu.scroll(scrollElement, scrollSpeed);
-        });
-    },
-    scroll: function (scroll, scrollSpeed) {
-        $('body, html').animate({ scrollTop: scroll }, scrollSpeed);
-    }
-  }
-
-  $(document).ready(function(e) {
-    scrollMenu.setup('.alphabetlist span');
-    backToTop.setup();
-  });
-</script>
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <noscript>
+    <p>This web page requires JavaScript to be enabled.</p>
+  </noscript>
+</body>
+</html>
