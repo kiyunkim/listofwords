@@ -1,3 +1,19 @@
+/** 
+ * Testing getting JSON data
+ * 
+ */
+
+ $.getJSON('list.json', function(data) {
+   var output = '';
+   $.each(data.name, function(key, value) {
+     output += '<a href="'+value.url+'">'+value.name+'</a>';
+   });
+   $('#json-test').html(output);
+ });
+
+
+
+
 var holiday_tooltip17 = (function(option) {
   var self = this,
       proto = holiday_tooltip17.prototype,
