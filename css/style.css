@@ -1,19 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Work+Sans");
 /* ------------------------------------
   Variables & Mixins
---------------------------------------- */
+------------------------------------- */
+/* ------------------------------------
+  Main Styles
+------------------------------------- */
+body {
+  margin: 0;
+  background: #c0c6e5;
+  font: normal 20px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 /* ------------------------------------
   ScrollTo list
---------------------------------------- */
+------------------------------------- */
 .container {
-  width: 100%;
+  width: 90%;
+  background: #fff;
   max-width: 779px;
-  margin: 10px auto;
-  line-height: 1.5;
-  font: normal 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 1em;
+  margin: 3vh auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
+  box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
   /* top nav */
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-top: 1em solid #c0c6e5;
+  }
 }
 
 .container * {

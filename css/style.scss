@@ -1,25 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Work+Sans');
+
 /* ------------------------------------
   Variables & Mixins
---------------------------------------- */
-$fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$fontSize: 16px;
+------------------------------------- */
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-size: 20px;
+
+$white: #fff;
+$highlight-color: #c0c6e5;
+
+$sm-breakpoint: 480px;
+$lg-breakpoint: 768px;
 
 @mixin box-sizing($var) {
   -webkit-box-sizing: $var;
   -moz-box-sizing: $var;
   box-sizing: $var;
 }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-shadow($var) {
+  -webkit-box-shadow: $var;
+  -moz-box-shadow: $var;
+  box-shadow: $var;
+}
+/* ------------------------------------
+  Main Styles
+------------------------------------- */
+body {
+  margin: 0;
+  background: $highlight-color;
+  font: normal #{$font-size}/1.5 $font-family;
+}
 
 /* ------------------------------------
   ScrollTo list
---------------------------------------- */
+------------------------------------- */
 .container {
-  width: 100%;
+  width: 90%;
+  background: $white;
   max-width: 779px;
-  margin: 10px auto;
-  line-height: 1.5;
-  font: normal $fontSize $fontFamily;
+  padding: 1em;
+  margin: 3vh auto;
   @include box-sizing(border-box);
+  @include border-radius(.5em);
+  @include box-shadow(2em 2.5em 8em rgba(0,0,0,0.2));
+  @media screen and (max-width: $sm-breakpoint) {
+    width: 100%;
+    margin: 0;
+    @include border-radius(0);
+    border-top: 1em solid $highlight-color;
+  }
   * {
     list-style: none;
     @include box-sizing(border-box);

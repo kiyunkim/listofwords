@@ -1,7 +1,6 @@
 /** 
  * Testing getting JSON data
  * 
- */
 $(document).ready(function() {
   $.getJSON('list.json', function(data) {
     var output = '';
@@ -11,6 +10,7 @@ $(document).ready(function() {
     $('#json-test').html(output);
   }); 
 });
+ */
 
 
 
