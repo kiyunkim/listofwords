@@ -2,15 +2,15 @@
  * Testing getting JSON data
  * 
  */
-
- $.getJSON('list.json', function(data) {
-   var output = '';
-   $.each(data.name, function(key, value) {
-     output += '<a href="'+value.url+'">'+value.name+'</a>';
-   });
-   $('#json-test').html(output);
- });
-
+$(document).ready(function() {
+  $.getJSON('list.json', function(data) {
+    var output = '';
+    $.each(data.name, function(key, value) {
+      output += '<a href="'+value.url+'">'+value.name+'</a>';
+    });
+    $('#json-test').html(output);
+  }); 
+});
 
 
 
