@@ -12,30 +12,32 @@ body {
 }
 
 /* ------------------------------------
-  ScrollTo list
+  List
 ------------------------------------- */
 .container {
   width: 90%;
   background: #fff;
-  max-width: 779px;
-  padding: 1em;
+  max-width: 1000px;
+  padding: 3% 5%;
   margin: 3vh auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
   -webkit-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
   box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
-  /* top nav */
+  /* for mobile */
+  /* for larger desktops */
 }
 
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;
     margin: 0;
+    padding: 5%;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -43,67 +45,67 @@ body {
   }
 }
 
-.container * {
-  list-style: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+@media screen and (min-width: 1680px) {
+  .container {
+    padding: 2em 3em;
+  }
 }
 
-.container h1 {
+.title {
   line-height: 1;
+  font-size: 2.5em;
+  margin-top: .5em;
   text-align: center;
 }
 
-.container h1 .title {
-  font-size: 1.5em;
-  font-weight: bold;
+.letters-list {
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.container .alphabetlist {
+.letter-heading {
+  text-transform: uppercase;
+}
+
+/* top nav 
+.alphabetlist {
   margin: 1em;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   text-align: center;
   padding: 5px 0;
 }
-
-.container .alphabetlist span {
+.alphabetlist span {
   display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
   cursor: pointer;
   padding: 5px;
 }
-
-.container .alphabetlist span.nope {
-  color: #ddd;
+.alphabetlist span.nope {
+  color: #ddd; 
   cursor: default;
 }
-
-/* section */
+*/
+/* section 
 .brand-section {
   padding: 1em;
   margin: 1em 0;
 }
-
 .brand-section p {
   font-weight: bold;
   font-size: 1.3em;
   margin-bottom: .5em;
   border-bottom: 1px solid #ddd;
 }
-
 .brand-section a {
-  text-decoration: none;
+  text-decoration: none; 
   padding: 5px 0;
   display: inline-block;
 }
-
 .brand-section a:hover {
   color: #999;
 }
-
 .backtotop {
   cursor: pointer;
   text-transform: uppercase;
@@ -112,15 +114,13 @@ body {
   font-weight: bold;
   padding: 5px;
 }
-
 .backtotop::after {
   clear: both;
   content: '';
   display: table;
 }
-
 @media screen and (max-device-width: 46em) {
-  .container {
+  .container { 
     margin: 0;
     padding: 0 5px;
   }
@@ -141,9 +141,7 @@ body {
     background-color: #aaa;
   }
   .brand-section,
-  .brand-section ul {
-    margin: 0;
-  }
+  .brand-section ul { margin: 0; }
   .back-to-top {
     z-index: 5;
     position: fixed;
@@ -152,7 +150,7 @@ body {
     width: 70px;
     height: 50px;
     line-height: 50px;
-    background-color: rgba(48, 46, 48, 0.9);
+    background-color: rgba(48,46,48,.9);
   }
   .back-to-top a {
     display: inline-block;
@@ -166,7 +164,7 @@ body {
     color: #fff;
   }
 }
-
+*/
 /* ------------------------------------
   Tooltips
 --------------------------------------- */

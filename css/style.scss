@@ -9,8 +9,10 @@ $font-size: 20px;
 $white: #fff;
 $highlight-color: #c0c6e5;
 
-$sm-breakpoint: 480px;
-$lg-breakpoint: 768px;
+$s-breakpoint: 480px; // max mobile
+$m-breakpoint: 768px; // max-tablet
+$l-breakpoint: 1280px;
+$xl-breakpoint: 1680px;
 
 @mixin box-sizing($var) {
   -webkit-box-sizing: $var;
@@ -27,6 +29,8 @@ $lg-breakpoint: 768px;
   -moz-box-shadow: $var;
   box-shadow: $var;
 }
+
+
 /* ------------------------------------
   Main Styles
 ------------------------------------- */
@@ -37,58 +41,65 @@ body {
 }
 
 /* ------------------------------------
-  ScrollTo list
+  List
 ------------------------------------- */
 .container {
   width: 90%;
   background: $white;
-  max-width: 779px;
-  padding: 1em;
+  max-width: 1000px;
+  padding: 3% 5%;
   margin: 3vh auto;
   @include box-sizing(border-box);
-  @include border-radius(.5em);
+  @include border-radius(1em);
   @include box-shadow(2em 2.5em 8em rgba(0,0,0,0.2));
-  @media screen and (max-width: $sm-breakpoint) {
+  /* for mobile */
+  @media screen and (max-width: $s-breakpoint) {
     width: 100%;
     margin: 0;
+    padding: 5%;
     @include border-radius(0);
     border-top: 1em solid $highlight-color;
   }
-  * {
-    list-style: none;
-    @include box-sizing(border-box);
-  }
-  h1 {
-    line-height: 1;
-    text-align: center;
-  }
-  h1 .title {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  /* top nav */
-  .alphabetlist {
-    margin: 1em;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-    padding: 5px 0;
-  }
-  .alphabetlist span {
-    display: inline-block;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px;
-  }
-  .alphabetlist span.nope {
-    color: #ddd; 
-    cursor: default;
+  /* for larger desktops */
+  @media screen and (min-width: $xl-breakpoint) {
+    padding: 2em 3em;
   }
 }
+.title {
+  line-height: 1;
+  font-size: 2.5em;
+  margin-top: .5em;
+  text-align: center;
+}
+.letters-list {
+  text-align: center;
+  text-transform: uppercase;
+}
+.letter-heading {
+  text-transform: uppercase;
+}
 
-/* section */
+/* top nav 
+.alphabetlist {
+  margin: 1em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 5px 0;
+}
+.alphabetlist span {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+}
+.alphabetlist span.nope {
+  color: #ddd; 
+  cursor: default;
+}
+*/
+/* section 
 .brand-section {
   padding: 1em;
   margin: 1em 0;
@@ -165,6 +176,7 @@ body {
     color: #fff;
   }
 }
+*/
 
 /* ------------------------------------
   Tooltips
@@ -203,5 +215,3 @@ body {
   bottom: -18px;
   margin-left: -18px;
 }
-
-  

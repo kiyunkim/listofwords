@@ -76,12 +76,13 @@ var holiday_tooltip17 = (function(option) {
     setup: self.setup
   };
 });
+
 $(document).ready(function() {
   var holiday_tooltip2017 = new holiday_tooltip17({
     tooltipTarget: '.tooltip_map_area',
     toolTip: '.title_tag'
   });
-  holiday_tooltip2017.setup();
+  // holiday_tooltip2017.setup();
 });
 
 
