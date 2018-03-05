@@ -48,7 +48,7 @@ body {
   background: $white;
   max-width: 1000px;
   padding: 3% 5%;
-  margin: 3vh auto;
+  margin: 4em auto 6em;
   @include box-sizing(border-box);
   @include border-radius(1em);
   @include box-shadow(2em 2.5em 8em rgba(0,0,0,0.2));
