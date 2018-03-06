@@ -67,9 +67,17 @@ body {
   font-size: 1.3em;
   text-align: center;
   text-transform: uppercase;
+  padding: .5em 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* flexbox */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .letter {
@@ -77,8 +85,14 @@ body {
   font-size: .9em;
   color: #333;
   display: block;
-  background: #ccc;
   padding: 0 7px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.all-words {
+  margin: 1em 0;
 }
 
 .letter-heading {

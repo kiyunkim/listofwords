@@ -31,6 +31,11 @@ $xl-breakpoint: 1680px;
   -moz-box-shadow: $var;
   box-shadow: $var;
 }
+@mixin transition($var) {
+  -webkit-transition: $var;
+  -o-transition: $var;
+  transition: $var;
+}
 
 
 /* ------------------------------------
@@ -82,19 +87,31 @@ body {
   font-size: 1.3em;
   text-align: center;
   text-transform: uppercase;
+  padding: .5em 0;
+  @include box-sizing(border-box);
+
+
+  /* flexbox */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .letter {
-    text-decoration: none;
-    font-size: .9em;
-    color: $font-color;
-    display: block;
-    background: $grey;
-    padding: 0 7px;
-  
+  text-decoration: none;
+  font-size: .9em;
+  color: $font-color;
+  display: block;
+  padding: 0 7px;
+  @include transition(all .3s ease);
 }
+.all-words {
+  margin: 1em 0;
+}
+
+
 .letter-heading {
   margin: 0;
   text-transform: uppercase;
