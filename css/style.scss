@@ -5,6 +5,7 @@
 ------------------------------------- */
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $font-size: 20px;
+$font-color: #333;
 
 $white: #fff;
 $highlight-color: #c0c6e5;
@@ -36,6 +37,7 @@ $xl-breakpoint: 1680px;
 ------------------------------------- */
 body {
   margin: 0;
+  color: $font-color;
   background: $highlight-color;
   font: normal #{$font-size}/1.5 $font-family;
 }
@@ -47,10 +49,10 @@ body {
   width: 90%;
   background: $white;
   max-width: 1000px;
-  padding: 3% 5%;
+  padding: 5% 7%;
   margin: 4em auto 6em;
   @include box-sizing(border-box);
-  @include border-radius(1em);
+  @include border-radius(1.5em);
   @include box-shadow(2em 2.5em 8em rgba(0,0,0,0.2));
   /* for mobile */
   @media screen and (max-width: $s-breakpoint) {
@@ -67,13 +69,18 @@ body {
 }
 .title {
   line-height: 1;
-  font-size: 2.5em;
-  margin-top: .5em;
+  font-size: 2.8em;
+  margin-top: 0;
   text-align: center;
 }
 .letters-list {
+  font-size: 1.3em;
   text-align: center;
   text-transform: uppercase;
+}
+.letter {
+  // text-decoration: none;
+  color: $font-color;
 }
 .letter-heading {
   text-transform: uppercase;

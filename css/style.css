@@ -7,6 +7,7 @@
 ------------------------------------- */
 body {
   margin: 0;
+  color: #333;
   background: #c0c6e5;
   font: normal 20px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -18,14 +19,14 @@ body {
   width: 90%;
   background: #fff;
   max-width: 1000px;
-  padding: 3% 5%;
+  padding: 5% 7%;
   margin: 4em auto 6em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  border-radius: 1em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  border-radius: 1.5em;
   -webkit-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
   box-shadow: 2em 2.5em 8em rgba(0, 0, 0, 0.2);
@@ -53,14 +54,19 @@ body {
 
 .title {
   line-height: 1;
-  font-size: 2.5em;
-  margin-top: .5em;
+  font-size: 2.8em;
+  margin-top: 0;
   text-align: center;
 }
 
 .letters-list {
+  font-size: 1.3em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.letter {
+  color: #333;
 }
 
 .letter-heading {
