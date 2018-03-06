@@ -1,0 +1,22 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 3em 85%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "title title"
+    "nav main ";
+    justify-content: space-between;	
+  /* grid-gap: 1em; */
+}
+.title {
+  grid-area: title;
+}
+.letters-list {
+  grid-area: nav;
+  -ms-grid-row-align: start;
+  align-self: start;
+}
+.all-words {
+  grid-area: main;
+}
