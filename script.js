@@ -1,16 +1,11 @@
-/** 
- * Testing getting JSON data
- * 
-$(document).ready(function() {
-  $.getJSON('list.json', function(data) {
-    var output = '';
-    $.each(data.name, function(key, value) {
-      output += '<a href="'+value.url+'">'+value.name+'</a>';
-    });
-    $('#json-test').html(output);
-  }); 
-});
- */
+$('.words-list').each(function() {
+  if ($(this).children().length > 3) {
+    $(this).addClass('columns');
+  }
+})
+
+
+
 
 
 

@@ -10,12 +10,12 @@ body {
   line-height: 1.5;
   color: #333;
   font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   background: #c0c6e5;
 }
 
 /* ------------------------------------
-  List
+  List: Container + Header
 ------------------------------------- */
 .container {
   width: 90%;
@@ -93,15 +93,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.all-words {
-  margin: 1em 0;
-}
-
-.letter-heading {
-  margin: 0;
-  text-transform: uppercase;
-}
-
 /* top nav 
 .alphabetlist {
   margin: 1em;
@@ -122,84 +113,54 @@ body {
   cursor: default;
 }
 */
-/* section 
-.brand-section {
-  padding: 1em;
-  margin: 1em 0;
+/* ------------------------------------
+  List: Main
+------------------------------------- */
+.main {
+  padding: 1em 0;
 }
-.brand-section p {
+
+.letter-section {
+  margin: 2em 0;
+  padding: 1em 0;
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+}
+
+.letter-heading {
+  margin: 0;
+  width: 25%;
   font-weight: bold;
-  font-size: 1.3em;
-  margin-bottom: .5em;
-  border-bottom: 1px solid #ddd;
-}
-.brand-section a {
-  text-decoration: none; 
-  padding: 5px 0;
+  padding-left: 1em;
+  vertical-align: top;
   display: inline-block;
-}
-.brand-section a:hover {
-  color: #999;
-}
-.backtotop {
-  cursor: pointer;
   text-transform: uppercase;
-  float: right;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.backtotop::after {
-  clear: both;
-  content: '';
-  display: table;
+
+.words-list {
+  list-style: none;
+  display: inline-block;
+  width: 74%;
+  margin: 0;
+  padding: 0 0 0 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-@media screen and (max-device-width: 46em) {
-  .container { 
-    margin: 0;
-    padding: 0 5px;
-  }
-  .alphabetlist {
-    border: none;
-    padding: 0;
-    margin: 10px 0;
-  }
-  .alphabetlist span {
-    font-size: 1.5em;
-    padding: 4px 0;
-    margin: 4px 2px;
-    background-color: #f2f2f2;
-    width: 1.5em;
-    display: inline-block;
-  }
-  .alphabetlist span:not(.nope):active {
-    background-color: #aaa;
-  }
-  .brand-section,
-  .brand-section ul { margin: 0; }
-  .back-to-top {
-    z-index: 5;
-    position: fixed;
-    bottom: 35px;
-    right: 0;
-    width: 70px;
-    height: 50px;
-    line-height: 50px;
-    background-color: rgba(48,46,48,.9);
-  }
-  .back-to-top a {
-    display: inline-block;
-    padding: .625rem;
-    font-size: .75rem;
-    vertical-align: middle;
-    line-height: normal;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-  }
+
+.words-list.columns {
+  -webkit-column-count: 3;
+  column-count: 3;
 }
-*/
+
+.word {
+  text-decoration: none;
+  color: #333;
+}
+
 /* ------------------------------------
   Tooltips
 --------------------------------------- */
