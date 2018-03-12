@@ -1,4 +1,4 @@
-# Word List
+# List of Words
 
 - Tooltip + Smooth Scroll
 
