@@ -2,7 +2,50 @@ $('.words-list').each(function() {
   if ($(this).children().length > 3) {
     $(this).addClass('columns');
   }
-})
+});
+
+
+var xhr = new XMLHttpRequest();
+xhr.responseType = 'text';
+xhr.open('get', 'words.json', true);
+xhr.send();
+
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var list,
+    word,
+    definition;
+  
+  function log(log) {
+    console.log(log);
+  }
+  
+xhr.onload = function() {
+  if (xhr.status === 200){
+    list = JSON.parse(xhr.responseText);
+    log(list)
+
+    //log(alphabet[0])
+    log(Object.keys(list)[0])
+
+    for (l = 0; l < Object.keys(list).length; l++) {
+      var letter = Object.keys(list)[l];
+      log(typeof(letter))
+      log(typeof(list.a));
+      for (i = 0; i < list.letter.length; i++) {
+        console.log(list.letter[i].word+': '+list.letter[i].definition)
+      }
+    }
+
+    
+    
+  }
+}
+
+
+
+
+
 
 
 
@@ -50,8 +93,19 @@ var holiday_tooltip17 = (function(option) {
     $this.attr('title', titleValue);
     $(toolTip).hide();
   };
-  
+
   function showTooltips() {
+    $(tooltipTarget)
+      .mouseover(function() {
+        $this = $(this);
+        tooltipMouseenter($this);
+      })
+      .mouseout(function() {
+
+        tooltipMouseout($this);
+      })
+  }
+  function showTooltips2() {
     $(tooltipTarget).hover(
       function() {
         // mouseenter
@@ -147,6 +201,6 @@ var scrollMenu = {
 }
 
 $(document).ready(function(e) {
-  scrollMenu.setup('.alphabetlist span');
-  backToTop.setup();
+  //scrollMenu.setup('.alphabetlist span');
+  //backToTop.setup();
 });
