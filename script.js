@@ -1,49 +1,56 @@
-var xhr = new XMLHttpRequest();
-xhr.responseType = 'text';
-xhr.open('get', 'words.json', true);
-xhr.send();
+(function() {
+  var myFunc = function(options) {
+    var xhr = new XMLHttpRequest(),
+        data,
+        word,
+        definition,
+        alphabet = [],
+        wordsList = options.wordsList;
 
+    xhr.responseType = 'text';
+    xhr.open('get', 'words.json', true);
+    xhr.send();
 
-var data,
-    word,
-    definition,
-    alphabet = [];
-  
-  function log(log) {
-    console.log(log);
-  }
-  
-xhr.onload = function() {
-  if (xhr.status === 200){
-    data = JSON.parse(xhr.responseText);
+    xhr.onload = function() {
+      if (xhr.status === 200){
+        data = JSON.parse(xhr.responseText);
 
-    /* create array of letters for retrieving index */
-    for(var letter in data){
-      alphabet.push(letter);
-    }
-    
-    for (i = 0; i < alphabet.length; i++) {
-      var letterArray = data[alphabet[i]];
-      
-      for (j = 0; j < letterArray.length; j++) {
+        // create array of letters for retrieving its index
+        for (var letter in data) {
+          alphabet.push(letter);
+        }
         
-        word = letterArray[j].word;
-        definition = letterArray[j].definition;
-        
-        $('#'+alphabet[i]+' .words-list').append('<li><a href="#" class="word">'+word+'</a></li>');
-        addColumns()
+        for (i = 0; i < alphabet.length; i++) {
+          var letterArray = data[alphabet[i]];
+          
+          for (j = 0; j < letterArray.length; j++) {
+            
+            word = letterArray[j].word;
+            definition = letterArray[j].definition;
+            
+            $('#'+alphabet[i]+' .words-list').append('<li><a href="#" class="word">'+word+'</a></li>');
+            addColumns()
+          }
+        }
       }
-    }
+    };
 
-  }
-}
-function addColumns() {
-  $('.words-list').each(function() {
-    if ($(this).children().length > 3) {
-      $(this).addClass('columns');
+    function addColumns() {
+      $(wordsList).each(function() {
+        if ($(this).children().length > 3) {
+          $(this).addClass('columns');
+        }
+      });
     }
+  
+  };
+
+  $(document).ready(function() {
+    myFunc({
+      wordsList: '.words-list'
+    });
   });
-}
+}());
 
 
 
