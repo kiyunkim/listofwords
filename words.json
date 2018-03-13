@@ -2,19 +2,19 @@
   "a": [
     {
       "word": "abomination",
-      "definition": "definition"
+      "definition": "(n.) a thing that causes disgust or hatred"
     },
     {
       "word": "aesthetic",
-      "definition": "definition"
+      "definition": "(n.) a particular individual's set of ideas about style and taste, along with its expression"
     },
     {
       "word": "affliction",
-      "definition": "definition"
+      "definition": "(n.) a state of pain, distress, or grief; misery"
     },
     {
       "word": "amethyst",
-      "definition": "definition"
+      "definition": "(n.) a purple or violet quartz, used as a gem"
     },
     {
       "word": "anesthesia",
@@ -80,6 +80,694 @@
     },
     {
       "word": "brawl",
+      "definition": "definition"
+    }
+  ],
+  "c": [
+    {
+      "word": "calligraphy",
+      "definition": "definition"
+    },
+    {
+      "word": "cannibalism",
+      "definition": "definition"
+    },
+    {
+      "word": "cappuccino",
+      "definition": "definition"
+    },
+    {
+      "word": "celestial",
+      "definition": "definition"
+    },
+    {
+      "word": "chaos",
+      "definition": "definition"
+    },
+    {
+      "word": "chromatic",
+      "definition": "definition"
+    },
+    {
+      "word": "citadel",
+      "definition": "definition"
+    },
+    {
+      "word": "clandestine",
+      "definition": "definition"
+    },
+    {
+      "word": "cobalt",
+      "definition": "definition"
+    },
+    {
+      "word": "crimson",
+      "definition": "definition"
+    },
+    {
+      "word": "cryptic",
+      "definition": "definition"
+    },
+    {
+      "word": "cynical",
+      "definition": "definition"
+    }
+  ],
+  "d": [
+    {
+      "word": "decapitate",
+      "definition": "definition"
+    },
+    {
+      "word": "decipher",
+      "definition": "definition"
+    },
+    {
+      "word": "defenestrate",
+      "definition": "definition"
+    },
+    {
+      "word": "demolition",
+      "definition": "definition"
+    },
+    {
+      "word": "denouement",
+      "definition": "definition"
+    },
+    {
+      "word": "didactic",
+      "definition": "definition"
+    },
+    {
+      "word": "divergent",
+      "definition": "definition"
+    },
+    {
+      "word": "dysphoria",
+      "definition": "definition"
+    },
+    {
+      "word": "dystopia",
+      "definition": "definition"
+    }
+  ],
+  "e": [
+    {
+      "word": "eclectic",
+      "definition": "definition"
+    },
+    {
+      "word": "ecstasy",
+      "definition": "definition"
+    },
+    {
+      "word": "effervescent",
+      "definition": "definition"
+    },
+    {
+      "word": "elixir",
+      "definition": "definition"
+    },
+    {
+      "word": "eloquence",
+      "definition": "definition"
+    },
+    {
+      "word": "elucidate",
+      "definition": "definition"
+    },
+    {
+      "word": "empathy",
+      "definition": "definition"
+    },
+    {
+      "word": "endocytosis",
+      "definition": "definition"
+    },
+    {
+      "word": "enigma",
+      "definition": "definition"
+    },
+    {
+      "word": "ephemeral",
+      "definition": "definition"
+    },
+    {
+      "word": "epidemic",
+      "definition": "definition"
+    },
+    {
+      "word": "epiphany",
+      "definition": "definition"
+    },
+    {
+      "word": "epoch",
+      "definition": "definition"
+    },
+    {
+      "word": "equinox",
+      "definition": "definition"
+    },
+    {
+      "word": "equity",
+      "definition": "definition"
+    },
+    {
+      "word": "espionage",
+      "definition": "definition"
+    },
+    {
+      "word": "eucatastrophe",
+      "definition": "definition"
+    },
+    {
+      "word": "euphoria",
+      "definition": "definition"
+    },
+    {
+      "word": "excalibur",
+      "definition": "definition"
+    },
+    {
+      "word": "exodus",
+      "definition": "definition"
+    },
+    {
+      "word": "exquisite",
+      "definition": "definition"
+    }
+  ],
+  "f": [
+    {
+      "word": "fester",
+      "definition": "definition"
+    },
+    {
+      "word": "flux",
+      "definition": "definition"
+    },
+    {
+      "word": "fuschia",
+      "definition": "definition"
+    },
+    {
+      "word": "fusion",
+      "definition": "definition"
+    }
+  ],
+  "g": [
+    {
+      "word": "ghastly",
+      "definition": "definition"
+    }
+  ],
+  "h": [
+    {
+      "word": "hegemony",
+      "definition": "definition"
+    },
+    {
+      "word": "hieroglyphics",
+      "definition": "definition"
+    },
+    {
+      "word": "hydrogen",
+      "definition": "definition"
+    },
+    {
+      "word": "hyperbole",
+      "definition": "definition"
+    },
+    {
+      "word": "hypnosis",
+      "definition": "definition"
+    }
+  ],
+  "i": [
+    {
+      "word": "illicit",
+      "definition": "definition"
+    },
+    {
+      "word": "incandescence",
+      "definition": "definition"
+    },
+    {
+      "word": "incognito",
+      "definition": "definition"
+    },
+    {
+      "word": "inconspicuous",
+      "definition": "definition"
+    },
+    {
+      "word": "inevitable",
+      "definition": "definition"
+    },
+    {
+      "word": "intercept",
+      "definition": "definition"
+    },
+    {
+      "word": "intrinsic",
+      "definition": "definition"
+    },
+    {
+      "word": "invigorate",
+      "definition": "definition"
+    }
+  ],
+  "j": [
+    {
+      "word": "jade",
+      "definition": "definition"
+    },
+    {
+      "word": "jaundice",
+      "definition": "definition"
+    },
+    {
+      "word": "juxtaposition",
+      "definition": "definition"
+    }
+  ],
+  "k": [
+    {
+      "word": "kleptomania",
+      "definition": "definition"
+    }
+  ],
+  "l": [
+    {
+      "word": "lace",
+      "definition": "definition"
+    },
+    {
+      "word": "lethargic",
+      "definition": "definition"
+    },
+    {
+      "word": "leviathan",
+      "definition": "definition"
+    },
+    {
+      "word": "lexapro",
+      "definition": "definition"
+    },
+    {
+      "word": "lexicon",
+      "definition": "definition"
+    },
+    {
+      "word": "lucid",
+      "definition": "definition"
+    },
+    {
+      "word": "luminescence",
+      "definition": "definition"
+    },
+    {
+      "word": "luminosity",
+      "definition": "definition"
+    }
+  ],
+  "m": [
+    {
+      "word": "macabre",
+      "definition": "definition"
+    },
+    {
+      "word": "majesty",
+      "definition": "definition"
+    },
+    {
+      "word": "malevolent",
+      "definition": "definition"
+    },
+    {
+      "word": "malicious",
+      "definition": "definition"
+    },
+    {
+      "word": "melancholy",
+      "definition": "definition"
+    },
+    {
+      "word": "misanthrope",
+      "definition": "definition"
+    },
+    {
+      "word": "monolith",
+      "definition": "definition"
+    },
+    {
+      "word": "monologue",
+      "definition": "definition"
+    }
+  ],
+  "n": [
+    {
+      "word": "nefarious",
+      "definition": "definition"
+    },
+    {
+      "word": "nomenclature",
+      "definition": "definition"
+    },
+    {
+      "word": "nonchalant",
+      "definition": "definition"
+    },
+    {
+      "word": "nostalgia",
+      "definition": "definition"
+    },
+    {
+      "word": "novocain",
+      "definition": "definition"
+    }
+  ],
+  "o": [
+    {
+      "word": "obelisk",
+      "definition": "definition"
+    },
+    {
+      "word": "obliteration",
+      "definition": "definition"
+    },
+    {
+      "word": "oblivion",
+      "definition": "definition"
+    },
+    {
+      "word": "oculus",
+      "definition": "definition"
+    },
+    {
+      "word": "omniscience",
+      "definition": "definition"
+    },
+    {
+      "word": "ondulate",
+      "definition": "definition"
+    },
+    {
+      "word": "onomatopoeia",
+      "definition": "definition"
+    },
+    {
+      "word": "oracle",
+      "definition": "definition"
+    },
+    {
+      "word": "orifice",
+      "definition": "definition"
+    },
+    {
+      "word": "oxymoron",
+      "definition": "definition"
+    }
+  ],
+  "p": [
+    {
+      "word": "palindrome",
+      "definition": "definition"
+    },
+    {
+      "word": "parabole",
+      "definition": "definition"
+    },
+    {
+      "word": "paradigm",
+      "definition": "definition"
+    },
+    {
+      "word": "paradox",
+      "definition": "definition"
+    },
+    {
+      "word": "parallax",
+      "definition": "definition"
+    },
+    {
+      "word": "paraphernalia",
+      "definition": "definition"
+    },
+    {
+      "word": "peculiar",
+      "definition": "definition"
+    },
+    {
+      "word": "pejorative",
+      "definition": "definition"
+    },
+    {
+      "word": "petrify",
+      "definition": "definition"
+    },
+    {
+      "word": "phlegm",
+      "definition": "definition"
+    },
+    {
+      "word": "phosphate",
+      "definition": "definition"
+    },
+    {
+      "word": "phosphorescent",
+      "definition": "definition"
+    },
+    {
+      "word": "placebo",
+      "definition": "definition"
+    },
+    {
+      "word": "plasma",
+      "definition": "definition"
+    },
+    {
+      "word": "plethora",
+      "definition": "definition"
+    },
+    {
+      "word": "pragmatic",
+      "definition": "definition"
+    },
+    {
+      "word": "proximity",
+      "definition": "definition"
+    },
+    {
+      "word": "psychiatry",
+      "definition": "definition"
+    }
+  ],
+  "q": [
+    {
+      "word": "quirks",
+      "definition": "definition"
+    },
+    {
+      "word": "quixotic",
+      "definition": "definition"
+    }
+  ],
+  "r": [
+    {
+      "word": "rancor",
+      "definition": "definition"
+    },
+    {
+      "word": "requiem",
+      "definition": "definition"
+    },
+    {
+      "word": "rococo",
+      "definition": "definition"
+    }
+  ],
+  "s": [
+    {
+      "word": "sabotage",
+      "definition": "definition"
+    },
+    {
+      "word": "scurvy",
+      "definition": "definition"
+    },
+    {
+      "word": "secrecy",
+      "definition": "definition"
+    },
+    {
+      "word": "semantics",
+      "definition": "definition"
+    },
+    {
+      "word": "septum",
+      "definition": "definition"
+    },
+    {
+      "word": "serendipity",
+      "definition": "definition"
+    },
+    {
+      "word": "soliloquy",
+      "definition": "definition"
+    },
+    {
+      "word": "solitude",
+      "definition": "definition"
+    },
+    {
+      "word": "spaghetti",
+      "definition": "definition"
+    },
+    {
+      "word": "stigmatize",
+      "definition": "definition"
+    },
+    {
+      "word": "stiletto",
+      "definition": "definition"
+    },
+    {
+      "word": "stung",
+      "definition": "definition"
+    },
+    {
+      "word": "superfluous",
+      "definition": "definition"
+    },
+    {
+      "word": "synopsis",
+      "definition": "definition"
+    },
+    {
+      "word": "syntax",
+      "definition": "definition"
+    }
+  ],
+  "t": [
+    {
+      "word": "taphephobia",
+      "definition": "definition"
+    },
+    {
+      "word": "tenacious",
+      "definition": "definition"
+    },
+    {
+      "word": "tribeca",
+      "definition": "definition"
+    },
+    {
+      "word": "trypophobia",
+      "definition": "definition"
+    }
+  ],
+  "u": [
+    {
+      "word": "uncanny",
+      "definition": "definition"
+    }
+  ],
+  "v": [
+    {
+      "word": "vagrant",
+      "definition": "definition"
+    },
+    {
+      "word": "vain",
+      "definition": "definition"
+    },
+    {
+      "word": "valid",
+      "definition": "definition"
+    },
+    {
+      "word": "valor",
+      "definition": "definition"
+    },
+    {
+      "word": "vapid",
+      "definition": "definition"
+    },
+    {
+      "word": "variation",
+      "definition": "definition"
+    },
+    {
+      "word": "velociraptor",
+      "definition": "definition"
+    },
+    {
+      "word": "vendetta",
+      "definition": "definition"
+    },
+    {
+      "word": "vengeance",
+      "definition": "definition"
+    },
+    {
+      "word": "venom",
+      "definition": "definition"
+    },
+    {
+      "word": "vex",
+      "definition": "definition"
+    },
+    {
+      "word": "vicious",
+      "definition": "definition"
+    },
+    {
+      "word": "visceral",
+      "definition": "definition"
+    },
+    {
+      "word": "vortex",
+      "definition": "definition"
+    }
+  ],
+  "w": [
+    {
+      "word": "warfare",
+      "definition": "definition"
+    },
+    {
+      "word": "wit",
+      "definition": "definition"
+    }
+  ],
+  "x": [
+    {
+      "word": "xenophobia",
+      "definition": "definition"
+    }
+  ],
+  "y": [
+    {
+      "word": "yacht",
+      "definition": "definition"
+    },
+    {
+      "word": "yakuza",
+      "definition": "definition"
+    },
+    {
+      "word": "yankee",
+      "definition": "definition"
+    }
+  ],
+  "z": [
+    {
+      "word": "zealot",
+      "definition": "definition"
+    },
+    {
+      "word": "zephyr",
       "definition": "definition"
     }
   ]
