@@ -51,7 +51,7 @@ body {
 }
 
 /* ------------------------------------
-  List: Container + Header
+  Container + Title
 ------------------------------------- */
 .container {
   width: 90%;
@@ -81,6 +81,10 @@ body {
   margin-top: 0;
   text-align: center;
 }
+
+/* ------------------------------------
+  Letters List
+------------------------------------- */
 .letters-list {
   margin: 0;
   padding: 0;
@@ -100,7 +104,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.letter {
+.letters-link {
   text-decoration: none;
   font-size: .9em;
   color: $font-color;
@@ -108,42 +112,23 @@ body {
   padding: 0 7px;
   @include transition(all .3s ease);
 }
-/* top nav 
-.alphabetlist {
-  margin: 1em;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  padding: 5px 0;
-}
-.alphabetlist span {
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 5px;
-}
-.alphabetlist span.nope {
-  color: #ddd; 
-  cursor: default;
-}
-*/
 
 /* ------------------------------------
-  List: Main
+  Words List
 ------------------------------------- */
-.main {
+.words-container {
   padding: 1em 0;
 }
-.letter-section {
+.words-section {
   margin: 2em 0;
   padding: 1em 0;
   border-top: 1px solid $grey;
   vertical-align: top;
 }
-.letter-heading {
+.words-heading {
   margin: 0;
   width: 25%;
+  font-size: 1em;
   font-weight: bold;
   padding-left: 1em;
   vertical-align: top;

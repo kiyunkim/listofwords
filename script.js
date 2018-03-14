@@ -1,12 +1,26 @@
 (function() {
+
   var myFunc = function(options) {
     var xhr = new XMLHttpRequest(),
         data,
         word,
         definition,
         alphabet = [],
-        wordsList = options.wordsList;
 
+        // element selectors
+        lettersList = options.lettersList,
+        lettersListItems = options.lettersListItems,
+        lettersListLinks = options.lettersListLinks,
+        wordsListsContainer = options.wordsListsContainer,
+        $wordsSection,
+        wordsSectionClass = options.wordsSectionClass,
+        $wordsHeading,
+        wordsHeadingClass = options.wordsHeadingClass,
+        $wordsList,
+        wordsListClass = options.wordsListClass,
+        wordLinkClass = options.wordLinkClass,
+        wordsColumnClass = options.wordsColumnClass;
+        
     xhr.responseType = 'text';
     xhr.open('get', 'words.json', true);
     xhr.send();
@@ -20,25 +34,42 @@
           alphabet.push(letter);
         }
         
+        // loop through all letters
         for (i = 0; i < alphabet.length; i++) {
-          var letterArray = data[alphabet[i]];
+          var letter = alphabet[i],
+              letterArray = data[letter];
           
+          $wordsSection = $('<div></div>').attr({
+            id: letter,
+            class: wordsSectionClass
+          });
+
+          if (letterArray.length > 0) {
+            $wordsSection
+              .appendTo(wordsListsContainer)
+              .append('<h2 class="'+wordsHeadingClass+'">'+letter+'</h2><ul class="'+wordsListClass+'"></ul>');
+          } else {
+            console.log(letter+' is empty');
+          }
+          
+          // loop through all words for each letter
           for (j = 0; j < letterArray.length; j++) {
             
             word = letterArray[j].word;
             definition = letterArray[j].definition;
+            $wordsList =  $('#'+letter+' .'+wordsListClass);
             
-            $('#'+alphabet[i]+' .words-list').append('<li><a href="#" class="word">'+word+'</a></li>');
-            addColumns()
+            $wordsList.append('<li><a href="#" class="'+wordLinkClass+'">'+word+'</a></li>');
+            addColumns();
           }
         }
       }
     };
 
     function addColumns() {
-      $(wordsList).each(function() {
+      $('.'+wordsListClass).each(function() {
         if ($(this).children().length > 3) {
-          $(this).addClass('columns');
+          $(this).addClass(wordsColumnClass);
         }
       });
     }
@@ -46,10 +77,20 @@
   };
 
   $(document).ready(function() {
+    // TODO: change function name..
     myFunc({
-      wordsList: '.words-list'
+      lettersList: '.letters-list',
+      lettersListItems: '',
+      lettersListLinks: '.letters-link',
+      wordsListsContainer: '.words-container',   // using
+      wordsSectionClass: 'words-section',        // using
+      wordsHeadingClass: 'words-heading',        // using
+      wordsListClass: 'words-list',              // using
+      wordLinkClass: 'word',                     // using
+      wordsColumnClass: 'columns'                // using
     });
   });
+
 }());
 
 
@@ -67,12 +108,7 @@
 /**
  * ScrollTo js, copy + pasted
  * TODO: Combine with tooltip js
- */
-
-
-
-
-/*
+ * 
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
 		$('#top').fadeIn();
@@ -128,11 +164,6 @@ $(document).ready(function(e) {
   //scrollMenu.setup('.alphabetlist span');
   //backToTop.setup();
 });
-
-
-
-
-
 
 
 
