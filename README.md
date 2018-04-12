@@ -1,6 +1,11 @@
 # List of Words
 
-- Tooltip + Smooth Scroll
+### To do
+
+- [ ] Add definitions
+- [ ] Tooltips
+- [ ] Smooth scrolling
+- [ ] Back to top button
 
 <!---
 - Simple tooltip that displays the title tag when hovered over products in an image
