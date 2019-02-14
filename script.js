@@ -4,6 +4,10 @@
         data,
         letters = [];
 
+    // element selectors
+    var wordsContainer = options.wordsContainer,
+        wordsLinksContainer = options.wordsLinksContainer;
+
     // load data
     xhr.responseType = 'text';
     xhr.open('get', 'words.json', true);
@@ -17,15 +21,40 @@
 
     function init() {
       // set letters array
-      for (var letter in data) {
-        letters.push(letter);
+      for (var l in data) {
+        letters.push(l);
       }
-      console.log(letters);
+
+      // create elements
+      for (var letter in data) { 
+        var letterArray = data[letter];
+        var numberOfWords = letterArray.length;
+
+        var format = {
+          link: '<li class="d-inline-block"><a class="letters-link h3 text-body font-weight-bold text-uppercase" href="#'+letter+'">'+letter+'</a></li>',
+          wordSection: '<div id="'+letter+'" class="words-section col-12 py-3 mt-3 border-top border-secondary w-100"></div>'
+        }
+
+        document.querySelector(wordsContainer).innerHTML += format.wordSection;
+        document.querySelector(wordsLinksContainer).innerHTML += format.link;
+        
+
+        for (i = 0; i < numberOfWords; i++) {
+          var wordObj = letterArray[i];
+          console.log(wordObj);
+
+
+        }
+      }
     } // init
+
 
   } // loadWords
 
-  loadWords();
+  loadWords({
+    wordsContainer: '#words-container',
+    wordsLinksContainer: '#letters-container'
+  });
 }());
 
 
