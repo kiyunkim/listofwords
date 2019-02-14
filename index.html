@@ -7,59 +7,47 @@
   <meta name="description" content="List of vocabulary words">
   <meta name="robots" content="index,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- <link rel="stylesheet" type="text/css" href="../css/normalize.min.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!--  -->
 </head>
 
 <body>
   <noscript>
-    <p>Uh oh, it looks like your browser doesn't support JavaScript or has it disabled! This web page requires JavaScript to display and function properly.</p>
+    <p class="noscript text-white bg-danger p-3">Uh oh, it looks like your browser doesn't support JavaScript or has it disabled! This web page requires JavaScript to display and function properly.</p>
   </noscript>
 
-  <div class="container">
-    <h1 class="title">List of Words</h1>
-    <ul class="letters-list">
-      <li class=""><a class="letters-link" href="#a">a</a></li>
-      <li class=""><a class="letters-link" href="#b">b</a></li>
-      <li class=""><a class="letters-link" href="#c">c</a></li>
-      <li class=""><a class="letters-link" href="#d">d</a></li>
-      <li class=""><a class="letters-link" href="#e">e</a></li>
-      <li class=""><a class="letters-link" href="#f">f</a></li>
-      <li class=""><a class="letters-link" href="#g">g</a></li>
-      <li class=""><a class="letters-link" href="#h">h</a></li>
-      <li class=""><a class="letters-link" href="#i">i</a></li>
-      <li class=""><a class="letters-link" href="#j">j</a></li>
-      <li class=""><a class="letters-link" href="#k">k</a></li>
-      <li class=""><a class="letters-link" href="#l">l</a></li>
-      <li class=""><a class="letters-link" href="#m">m</a></li>
-      <li class=""><a class="letters-link" href="#n">n</a></li>
-      <li class=""><a class="letters-link" href="#o">o</a></li>
-      <li class=""><a class="letters-link" href="#p">p</a></li>
-      <li class=""><a class="letters-link" href="#q">q</a></li>
-      <li class=""><a class="letters-link" href="#r">r</a></li>
-      <li class=""><a class="letters-link" href="#s">s</a></li>
-      <li class=""><a class="letters-link" href="#t">t</a></li>
-      <li class=""><a class="letters-link" href="#u">u</a></li>
-      <li class=""><a class="letters-link" href="#v">v</a></li>
-      <li class=""><a class="letters-link" href="#w">w</a></li>
-      <li class=""><a class="letters-link" href="#x">x</a></li>
-      <li class=""><a class="letters-link" href="#y">y</a></li>
-      <li class=""><a class="letters-link" href="#z">z</a></li>
-    </ul>
-    <main class="words-container">
-      <!-- 
-      This is the template the js will generate:
-      
-      <div id="a" class="words-section">
-        <p class="words-heading">a</p>
-        <ul class="words-list">
-          <li><a href="#" class="word">apple</a></li>
-          <li><a href="#" class="word">applesauce</a></li>
-        </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="wrapper w-100 py-4 px-5 my-sm-5 mx-lg-auto m-3 bg-white shadow-lg">
+        <div class="row">
+          <h1 class="title col text-center">List of Words</h1>
+        </div>
+        <div class="row justify-content-between">
+          <ul class="letters-list list-unstyled col-12 p-0 m-0">
+            <li class=""><a class="letters-link h3 text-body font-weight-bold text-uppercase" href="#a">a</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <main class="words-container col-12 p-0 no-gutters">
+
+            <!-- This is the template the js will generate: -->
+            <div id="letter" class="words-section col-12 py-3 mt-3 border-top border-secondary w-100">
+              <div class="row">
+                <h2 class="words-heading col-4 col-md-3 text-uppercase font-weight-bold">a</h2>
+                <ul class="words-list col-4 col-md-3 list-unstyled">
+                  <li><a href="#" class="word text-body">apple</a></li>
+                </ul>
+    
+              </div>
+            </div>
+
+          </main>
+        </div>
       </div>
-      -->
-    </main>
+    </div>
   </div>
 
   <div class="back-to-top" style="display: none;"><a href="#">Back To Top</a></div>
@@ -67,7 +55,6 @@
     <p></p>
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

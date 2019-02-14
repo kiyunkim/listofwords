@@ -4,8 +4,6 @@
   Variables & Mixins
 ------------------------------------- */
 $font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$font-size: 20px;
-$font-color: #333;
 
 $white: #fff;
 $grey: #ccc;
@@ -38,164 +36,22 @@ $xl-breakpoint: 1680px;
 }
 
 
-/* ------------------------------------
-  Main Styles
-------------------------------------- */
 body {
-  margin: 0;
-  line-height: 1.5;
-  color: $font-color;
-  font-size: $font-size;
-  font-family: $font-family;
   background: $highlight-color;
 }
 
-/* ------------------------------------
-  Container + Title
-------------------------------------- */
-.container {
-  width: 90%;
-  background: $white;
-  max-width: 1000px;
-  padding: 5% 7%;
-  margin: 4em auto 6em;
-  @include box-sizing(border-box);
+.wrapper {
+  max-width: 960px;
   @include border-radius(1.5em);
-  @include box-shadow(2em 2.5em 8em rgba(0,0,0,0.2));
-  /* for mobile */
-  @media screen and (max-width: $s-breakpoint) {
-    width: 100%;
-    margin: 0;
-    padding: 5%;
-    @include border-radius(0);
-    border-top: 1em solid $highlight-color;
-  }
-  /* for larger desktops */
-  @media screen and (min-width: $xl-breakpoint) {
-    padding: 2em 3em;
-  }
 }
 .title {
-  line-height: 1;
-  font-size: 2.8em;
-  margin-top: 0;
-  text-align: center;
-}
-
-/* ------------------------------------
-  Letters List
-------------------------------------- */
-.letters-list {
-  margin: 0;
-  padding: 0;
-  vertical-align: top;
-  list-style: none;
-  font-size: 1.3em;
-  text-align: center;
-  text-transform: uppercase;
-  padding: .5em 0;
-  @include box-sizing(border-box);
-
-  /* flexbox */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-.letters-link {
-  text-decoration: none;
-  font-size: .9em;
-  color: $font-color;
-  display: block;
-  padding: 0 7px;
-  @include transition(all .3s ease);
-}
-
-/* ------------------------------------
-  Words List
-------------------------------------- */
-.words-container {
-  padding: 1em 0;
-}
-.words-section {
-  margin: 2em 0;
-  padding: 1em 0;
-  border-top: 1px solid $grey;
-  vertical-align: top;
-}
-.words-heading {
-  margin: 0;
-  width: 25%;
-  font-size: 1em;
-  font-weight: bold;
-  padding-left: 1em;
-  vertical-align: top;
-  display: inline-block;
-  text-transform: uppercase;
-  @include box-sizing(border-box);
-}
-
-.words-list {
-  list-style: none;
-  display: inline-block;
-  width: 74%;
-  margin: 0;
-  padding: 0 0 0 1em;
-  @include box-sizing(border-box);
-  &.columns {
-    -webkit-column-count: 3;
-    column-count: 3;
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
   }
 }
-
-.word {
-  text-decoration: none;
-  color: $font-color;
-}
-
-
-
-
-
-
-
-
-/* ------------------------------------
-  Tooltips
---------------------------------------- */
-.title_tag {
-  display: inline-block;
-  position: absolute;
-  max-width: 200px;
-  text-align: center;
-  background-color: #eee;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 15px;
-  color: #000;
-}
-.title_tag p {
-  font-size: 14px;
-  line-height: 1.3;
-}
-.title_tag:before,
-.title_tag:after {
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #eee;
-  bottom: -15px;
-  content: '';
-  left: 50%;
-  margin-left: -15px;
-  position: absolute;
-}
-.title_tag:before {
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-top: 18px solid;
-  border-top-color: inherit; /* Can't be included in the shorthand to work */
-  bottom: -18px;
-  margin-left: -18px;
+.letters-link {}
+.words-heading {
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 }
