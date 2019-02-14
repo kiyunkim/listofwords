@@ -1,4 +1,51 @@
 (function() {
+  var loadWords = function(options) {
+    var xhr = new XMLHttpRequest(),
+        data,
+        letters = [];
+
+    // load data
+    xhr.responseType = 'text';
+    xhr.open('get', 'words.json', true);
+    xhr.onload = function() {
+      if (xhr.status === 200){
+        data = JSON.parse(xhr.responseText);
+        init();
+      }
+    } // xhr.onload
+    xhr.send();
+
+    function init() {
+      // set letters array
+      for (var letter in data) {
+        letters.push(letter);
+      }
+      console.log(letters);
+    } // init
+
+  } // loadWords
+
+  loadWords();
+}());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function() {
 
   var myFunc = function(options) {
     var xhr = new XMLHttpRequest(),
@@ -74,8 +121,7 @@
       });
     }
   
-  };
-
+  };/* 
   $(document).ready(function() {
     // TODO: change function name..
     myFunc({
@@ -89,7 +135,7 @@
       wordLinkClass: 'word',                     // using
       wordsColumnClass: 'columns'                // using
     });
-  });
+  });  */
 
 }());
 
@@ -160,10 +206,10 @@ var scrollMenu = {
   }
 }
 
-$(document).ready(function(e) {
+/* $(document).ready(function(e) {
   //scrollMenu.setup('.alphabetlist span');
   //backToTop.setup();
-});
+}); */
 
 
 
