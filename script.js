@@ -10,7 +10,7 @@
 
     // load data
     xhr.responseType = 'text';
-    xhr.open('get', 'words.json', true);
+    xhr.open('GET', 'words.json', true);
     xhr.onload = function() {
       if (xhr.status === 200){
         data = JSON.parse(xhr.responseText);
@@ -26,10 +26,11 @@
       }
 
       // create elements
-      for (var letter in data) { 
-        var letterArray = data[letter];
+      for (var letter in data) {
+        var letterArray = data[letter]; // array of words in the letter
         var numberOfWords = letterArray.length;
 
+        // DOM format
         var format = {
           link: '<li class="d-inline-block"><a class="letters-link h3 text-body font-weight-bold text-uppercase" href="#'+letter+'">'+letter+'</a></li>',
           wordSection: '<div id="'+letter+'" class="words-section col-12 pt-3 mt-3 border-top border-secondary w-100"><div class="row no-gutters"><h2 class="words-heading col-3 text-uppercase font-weight-bold">'+letter+'</h2><ul class="words-list col-9 list-unstyled"></ul></div></div>',
@@ -57,129 +58,18 @@
 
   } // loadWords
 
+  // generate html from json data
   loadWords({
     wordsContainer: '#words-container',
     wordsLinksContainer: '#letters-container'
   });
-}());
 
+  var smoothScroll = function(options) {
 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(function() {
-
-  var myFunc = function(options) {
-    var xhr = new XMLHttpRequest(),
-        data,
-        word,
-        definition,
-        alphabet = [],
-
-        // element selectors
-        lettersList = options.lettersList,
-        lettersListItems = options.lettersListItems,
-        lettersListLinks = options.lettersListLinks,
-        wordsListsContainer = options.wordsListsContainer,
-        $wordsSection,
-        wordsSectionClass = options.wordsSectionClass,
-        $wordsHeading,
-        wordsHeadingClass = options.wordsHeadingClass,
-        $wordsList,
-        wordsListClass = options.wordsListClass,
-        wordLinkClass = options.wordLinkClass,
-        wordsColumnClass = options.wordsColumnClass;
-        
-    xhr.responseType = 'text';
-    xhr.open('get', 'words.json', true);
-    xhr.send();
-
-    xhr.onload = function() {
-      if (xhr.status === 200){
-        data = JSON.parse(xhr.responseText);
-
-        // create array of letters for retrieving its index
-        for (var letter in data) {
-          alphabet.push(letter);
-        }
-        
-        // loop through all letters
-        for (i = 0; i < alphabet.length; i++) {
-          var letter = alphabet[i],
-              letterArray = data[letter];
-          
-          $wordsSection = $('<div></div>').attr({
-            id: letter,
-            class: wordsSectionClass
-          });
-
-          if (letterArray.length > 0) {
-            $wordsSection
-              .appendTo(wordsListsContainer)
-              .append('<h2 class="'+wordsHeadingClass+'">'+letter+'</h2><ul class="'+wordsListClass+'"></ul>');
-          } else {
-            console.log(letter+' is empty');
-          }
-          
-          // loop through all words for each letter
-          for (j = 0; j < letterArray.length; j++) {
-            
-            word = letterArray[j].word;
-            definition = letterArray[j].definition;
-            $wordsList =  $('#'+letter+' .'+wordsListClass);
-            
-            $wordsList.append('<li><a href="#" class="'+wordLinkClass+'">'+word+'</a></li>');
-            addColumns();
-          }
-        }
-      }
-    };
-
-    function addColumns() {
-      $('.'+wordsListClass).each(function() {
-        if ($(this).children().length > 3) {
-          $(this).addClass(wordsColumnClass);
-        }
-      });
-    }
-  
-  };/* 
-  $(document).ready(function() {
-    // TODO: change function name..
-    myFunc({
-      lettersList: '.letters-list',
-      lettersListItems: '',
-      lettersListLinks: '.letters-link',
-      wordsListsContainer: '.words-container',   // using
-      wordsSectionClass: 'words-section',        // using
-      wordsHeadingClass: 'words-heading',        // using
-      wordsListClass: 'words-list',              // using
-      wordLinkClass: 'word',                     // using
-      wordsColumnClass: 'columns'                // using
-    });
-  });  */
 
 }());
-
-
-
-
-
-
-
 
 
 
@@ -207,7 +97,7 @@
 	
 var backToTop = {
   setup: function () {
-    // values can be set in Chameleon, but we don't trust Chameleon...
+    
     var fadeSpeed = (typeof backToTopFadeSpeed == 'undefined') ? 'slow' : backToTopFadeSpeed;
     var scrollSpeed = (typeof backToTopScrollSpeed == 'undefined') ? 'slow' : backToTopScrollSpeed;
     var trigger = (typeof backToTopTrigger == 'undefined') ? 400 : backToTopTrigger;
