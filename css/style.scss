@@ -9,10 +9,10 @@ $white: #fff;
 $grey: #ccc;
 $highlight-color: #c0c6e5;
 
-$s-breakpoint: 480px; // max mobile
-$m-breakpoint: 768px; // max-tablet
-$l-breakpoint: 1280px;
-$xl-breakpoint: 1680px;
+$s-breakpoint: 576px;
+$m-breakpoint: 768px;
+$l-breakpoint: 992px;
+$xl-breakpoint: 1200px;
 
 @mixin box-sizing($var) {
   -webkit-box-sizing: $var;
@@ -45,13 +45,28 @@ body {
   @include border-radius(1.5em);
 }
 .title {
-  @media screen and (max-width: 767px) {
-    font-size: 2rem;
+  font-size: 2rem;
+  @media screen and (min-width: $m-breakpoint) {
   }
 }
-.letters-link {}
+.letters-link {
+  // 
+}
 .words-heading {
-  @media screen and (max-width: 767px) {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  @media screen and (min-width: $m-breakpoint) {
+    
+  }
+}
+.words-list {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  @media screen and (min-width: $s-breakpoint) {
+  }
+  @media screen and (min-width: $m-breakpoint) {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
   }
 }

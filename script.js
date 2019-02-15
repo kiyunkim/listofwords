@@ -32,17 +32,24 @@
 
         var format = {
           link: '<li class="d-inline-block"><a class="letters-link h3 text-body font-weight-bold text-uppercase" href="#'+letter+'">'+letter+'</a></li>',
-          wordSection: '<div id="'+letter+'" class="words-section col-12 py-3 mt-3 border-top border-secondary w-100"></div>'
+          wordSection: '<div id="'+letter+'" class="words-section col-12 py-3 mt-3 border-top border-secondary w-100"><div class="row"><h2 class="words-heading col-4 col-md-3 text-uppercase font-weight-bold">'+letter+'</h2><ul class="words-list col-8 col-md-9 list-unstyled"></ul></div></div>',
+          word: function(word) {
+            return '<li><a href="#" class="word text-body">'+word+'</a></li>';
+          }
         }
 
-        document.querySelector(wordsContainer).innerHTML += format.wordSection;
+        // set up letters links
         document.querySelector(wordsLinksContainer).innerHTML += format.link;
-        
+
+        // set up the containers
+        document.querySelector(wordsContainer).innerHTML += format.wordSection;
 
         for (i = 0; i < numberOfWords; i++) {
-          var wordObj = letterArray[i];
-          console.log(wordObj);
+          var word = letterArray[i].word;
+          var def = letterArray[i].definition;
 
+          console.log(letterArray.length)
+          console.log(format.word(word));
 
         }
       }
