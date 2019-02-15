@@ -1,4 +1,40 @@
 (function() {
+  //document.documentElement.scrollTop
+  var scrollTop,
+      backToTopButton = document.getElementById('back-to-top');
+
+  function scrolling(elFrom, elTo) {
+    scrollTop = elTo.offsetTop;
+    function scrollToEl(){
+      window.scrollTo({
+        top: scrollTop,
+        behavior: 'smooth'
+      });
+    }
+    elFrom.addEventListener('click', function(e) {
+      console.log(scrollTop)
+      e.preventDefault();
+      scrollToEl();
+    });
+    elFrom.addEventListener('keydown', function(e) {
+      if (e.key === 14) {
+        scrollToEl();
+      }
+    });
+  }
+  scrolling(backToTopButton, document.documentElement);
+
+  var toggleBackToTop = function() {
+    scrollTop = document.documentElement.scrollTop;
+    if (scrollTop >= 500) {
+      backToTopButton.classList.remove('hidden');
+      return;
+    }
+    backToTopButton.classList.add('hidden');
+  }
+  window.addEventListener('scroll', toggleBackToTop);
+
+
   var loadWords = function(options) {
     var xhr = new XMLHttpRequest(),
         data,
@@ -63,20 +99,6 @@
     wordsContainer: '#words-container',
     wordsLinksContainer: '#letters-container'
   });
-
-  var backToTop = function() {
-    var scrollTop = document.documentElement.scrollTop,
-        backToTopButton = document.getElementById('back-to-top');
-    
-    if (scrollTop >= 500) {
-      backToTopButton.classList.remove('hidden');
-      return;
-    }
-    backToTopButton.classList.add('hidden');
-  }
-  
-  window.addEventListener('scroll', backToTop);
-
 
 
 }());
